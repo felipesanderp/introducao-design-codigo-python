@@ -9,12 +9,12 @@ class MockRequest:
 
 
 class MockDriverHandlerError:
-    def variance(self, number: List[float]) -> float:
+    def variance(self, numbers: List[float]) -> float:
         return 3
 
 
 class MockDriverHandler:
-    def variance(self, number: List[float]) -> float:
+    def variance(self, numbers: List[float]) -> float:
         return 1000000
 
 
@@ -24,7 +24,9 @@ def test_calculate_with_variance_error():
     with raises(Exception) as excinfo:
         calculator_3.calculate(mock_request)
 
-    assert str(excinfo.value) == "Falha no processo: Variância menor que multiplicação"
+    assert (
+        str(excinfo.value) == "Falha no processo: variância menor que a multiplicação!"
+    )
 
 
 def test_calculate():

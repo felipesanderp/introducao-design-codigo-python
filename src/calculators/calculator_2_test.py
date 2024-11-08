@@ -13,6 +13,9 @@ class MockDriverHandler(DriverHandlerInterface):
     def stardard_derivation(self, number: List[float]) -> float:
         return 3
 
+    def variance(self, number: List[float]) -> float:
+        return 3
+
 
 # Integração entre NumpyHandler e Calculator2
 def test_calculate_integration():
