@@ -10,7 +10,7 @@ class MockRequest:
 
 
 class MockDriverHandler(DriverHandlerInterface):
-    def stardard_derivation(self, numbers: List[float]) -> float:
+    def stardard_derivation(self, number: List[float]) -> float:
         return 3
 
 
